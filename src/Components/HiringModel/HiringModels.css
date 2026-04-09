@@ -1,0 +1,113 @@
+.hiring-section {
+  font-family: 'Arial', sans-serif;
+  max-width: 1200px;
+  margin: 50px auto;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.hiring-header h1 {
+  font-size: 2.2rem;
+  font-weight: 800;
+  margin-bottom: 15px;
+}
+
+.hiring-header p {
+  color: #555;
+  max-width: 800px;
+  margin: 0 auto 40px;
+  line-height: 1.6;
+}
+
+/* Tabs Styling */
+.tabs-container {
+  width: 100%;
+}
+
+.tabs-header {
+  display: flex;
+  border-bottom: 2px solid #e0e0e0;
+  margin-bottom: 30px;
+}
+
+.tab-btn {
+  flex: 1;
+  padding: 15px;
+  border: none;
+  background: none;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  color: #666;
+  transition: all 0.3s ease;
+  border-bottom: 4px solid transparent;
+}
+
+.tab-btn.active {
+  background-color: #f0f0f0;
+  color: #333;
+  border-bottom: 4px solid #b91c1c; /* Dark red bottom border */
+}
+
+/* Grid Layout for Cards */
+.tab-content {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.info-card {
+  background: #fff;
+  border: 1px solid #eee;
+  padding: 30px;
+  text-align: left;
+  border-radius: 4px;
+  transition: transform 0.2s;
+}
+
+.info-card:hover {
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.info-card h3 {
+  font-size: 1.25rem;
+  margin-bottom: 20px;
+}
+
+.blue-text {
+  color: #0070ba; /* Matches the blue in your image */
+}
+
+.red-text {
+  color: #b91c1c; /* Matches the red in your image */
+}
+
+.info-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.info-card ul li {
+  position: relative;
+  padding-left: 20px;
+  margin-bottom: 12px;
+  color: #444;
+  font-size: 0.95rem;
+}
+
+/* Bullet Points */
+.info-card ul li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #333;
+  font-weight: bold;
+}
+
+/* Responsiveness */
+@media (max-width: 900px) {
+  .tab-content {
+    grid-template-columns: 1fr;
+  }
+}

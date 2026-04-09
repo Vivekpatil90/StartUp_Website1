@@ -1,0 +1,134 @@
+.site-footer {
+  background-color: #f1f1f1;
+  padding: 60px 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1.5fr 1fr; /* Middle column is slightly wider */
+  gap: 40px;
+}
+
+.footer-heading {
+  color: #b14a58; /* Muted red-brown from screenshot */
+  font-size: 1.25rem;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.mt-30 {
+  margin-top: 30px;
+}
+
+/* Link Lists */
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links li {
+  margin-bottom: 15px;
+}
+
+.footer-links a {
+  text-decoration: none;
+  color: #111;
+  font-size: 0.95rem;
+  transition: color 0.2s;
+}
+
+.footer-links a:hover {
+  color: #b14a58;
+}
+
+/* Address & Contact */
+.address-text {
+  line-height: 1.6;
+  font-size: 0.95rem;
+  color: #111;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.contact-item a {
+  text-decoration: none;
+  color: #111;
+  font-size: 0.95rem;
+}
+
+.icon-box {
+  width: 24px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 3px;
+  font-size: 12px;
+}
+
+.red-bg {
+  background-color: #b14a58;
+  color: white;
+}
+
+.red-text {
+  color: #b14a58;
+  font-size: 1.2rem;
+}
+
+/* Social Icons */
+.social-links {
+  display: flex;
+  gap: 10px;
+}
+
+.social-icon {
+  width: 32px;
+  height: 32px;
+  background-color: #b14a58;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+.social-icon:hover {
+  opacity: 0.8;
+}
+
+/* Responsiveness */
+@media (max-width: 992px) {
+  .footer-container {
+    grid-template-columns: 1fr 1fr; /* Two columns for tablets */
+  }
+}
+
+@media (max-width: 600px) {
+  .footer-container {
+    grid-template-columns: 1fr; /* Single column for mobile */
+    text-align: left;
+  }
+  
+  .footer-heading {
+    margin-top: 20px;
+  }
+}

@@ -1,0 +1,314 @@
+.hero-banner {
+  /* Replace with your actual image path */
+  background-image: url('https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1600&q=80');
+  background-size: cover;
+  background-position: center;
+  height: 80vh; /* Adjust height as needed */
+  width: 100%;
+  position: relative;
+  font-family: 'Inter', sans-serif;
+}
+
+.hero-overlay {
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.9) 30%, rgba(0, 0, 0, 0.2) 100%);
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.hero-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 5%;
+  width: 100%;
+}
+
+.hero-content {
+  max-width: 600px;
+  color: white;
+}
+
+.hero-title {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+/* The vertical red line next to "Transforming lives" */
+.line-decorator {
+  width: 4px;
+  height: 50px;
+  background-color: #ef4444;
+  display: inline-block;
+}
+
+.hero-subtitle {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+.hero-description {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #ccc;
+  margin-bottom: 30px;
+}
+
+.hero-cta {
+  background: linear-gradient(90deg, #f97316, #ef4444);
+  color: white;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: transform 0.2s;
+}
+
+.hero-cta:hover {
+  transform: scale(1.05);
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+  .hero-overlay {
+    background: rgba(0, 0, 0, 0.7); /* Solid dark overlay on mobile */
+    text-align: center;
+  }
+  
+  .hero-title {
+    font-size: 2.2rem;
+    justify-content: center;
+  }
+  
+  .line-decorator {
+    display: none; /* Remove line decorator on mobile for cleaner look */
+  }
+
+  .hero-subtitle {
+    font-size: 1.2rem;
+  }
+}
+.about-container {
+  font-family: 'Inter', sans-serif;
+  color: #333;
+  padding: 60px 20px;
+  background-color: #fff;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 800;
+  margin-bottom: 40px;
+  position: relative;
+}
+
+/* Stats Section Styles */
+.stats-section {
+  max-width: 1100px;
+  margin: 0 auto 80px;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  border-top: 1px solid #eee;
+  padding-top: 40px;
+}
+
+.stat-item {
+  text-align: left;
+}
+
+.stat-value {
+  font-size: 2.2rem;
+  font-weight: 800;
+  margin: 0;
+  color: #111;
+  border-bottom: 3px solid #b14a58; /* Signature red underline */
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+.stat-label {
+  font-size: 0.9rem;
+  color: #666;
+  font-weight: 500;
+}
+
+/* Features Section Styles */
+.features-section {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.section-subtitle {
+  max-width: 800px;
+  margin: 0 auto 50px;
+  color: #555;
+  line-height: 1.6;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* 5 columns as per screenshot */
+  gap: 20px;
+}
+
+.feature-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  transition: transform 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+}
+
+.feature-icon {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+  /* If using actual images/icons, style them here */
+}
+
+.feature-title {
+  font-size: 0.85rem;
+  font-weight: 600;
+  line-height: 1.4;
+  color: #444;
+}
+
+/* --- Responsiveness --- */
+
+/* Tablets */
+@media (max-width: 1024px) {
+  .features-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .stats-grid {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  
+  .stat-value {
+    font-size: 1.8rem;
+  }
+
+  .features-grid {
+    grid-template-columns: 1fr 1fr; /* 2 items per row on mobile */
+  }
+
+  .section-title {
+    font-size: 1.5rem;
+  }
+}
+.advantages-section {
+  padding: 80px 5%;
+  background-color: #f9f9f9;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.advantages-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 50px;
+  align-items: center;
+}
+
+/* Text Styling */
+.advantages-title {
+  font-size: 2.2rem;
+  font-weight: 800;
+  line-height: 1.3;
+  color: #1a1a1a;
+  margin-bottom: 30px;
+}
+
+.advantages-list {
+  list-style: none;
+  padding: 0;
+}
+
+.advantage-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 18px;
+  font-size: 1.05rem;
+  font-weight: 500;
+  color: #444;
+}
+
+.red-dot {
+  width: 12px;
+  height: 12px;
+  background-color: #b14a58; /* Signature red */
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+/* Clipped Image Styling */
+.advantages-image-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.clipped-mask {
+  width: 100%;
+  max-width: 500px;
+  aspect-ratio: 1 / 1;
+  /* This creates the jagged/diamond polygon look from the screenshot */
+  clip-path: polygon(25% 0%, 100% 0%, 100% 75%, 75% 100%, 0% 100%, 0% 25%);
+  overflow: hidden;
+  background-color: #ddd;
+}
+
+.clipped-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Responsiveness */
+@media (max-width: 992px) {
+  .advantages-container {
+    grid-template-columns: 1fr;
+    text-align: left;
+  }
+
+  .advantages-image-wrapper {
+    order: -1; /* Image appears above text on tablets/mobile */
+    margin-bottom: 30px;
+  }
+  
+  .advantages-title {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .advantage-item {
+    font-size: 0.95rem;
+  }
+}

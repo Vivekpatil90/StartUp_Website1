@@ -1,0 +1,91 @@
+.tech-section {
+  background: #f4f4f4;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.container {
+  max-width: 1100px;
+  margin: auto;
+}
+
+.tech-section h2 {
+  font-size: 32px;
+  margin-bottom: 30px;
+  font-weight: 600;
+}
+
+/* Tabs */
+.tabs {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 25px;
+  margin-bottom: 40px;
+}
+
+.tab {
+  background: transparent;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  padding-bottom: 8px;
+  color: #555;
+  transition: 0.3s;
+  border-bottom: 2px solid transparent;
+}
+
+.tab:hover {
+  color: #ff4b2b;
+}
+
+.tab.active {
+  color: #ff4b2b;
+  border-bottom: 2px solid #ff4b2b;
+}
+
+/* Grid */
+.tech-grid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
+  margin-bottom: 40px;
+}
+
+.tech-card {
+  width: 120px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.tech-card img {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 10px;
+}
+
+.tech-card p {
+  font-size: 14px;
+  color: #333;
+}
+
+.tech-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Button */
+.cta-btn {
+  background: linear-gradient(45deg, #ff416c, #ff4b2b);
+  border: none;
+  padding: 12px 25px;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.cta-btn:hover {
+  opacity: 0.9;
+}

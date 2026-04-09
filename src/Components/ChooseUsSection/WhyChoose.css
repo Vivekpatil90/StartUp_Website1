@@ -1,0 +1,115 @@
+.why-section {
+  background: #f5f5f5;
+  padding: 80px 20px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.why-container {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+  flex-wrap: wrap;
+}
+
+/* LEFT IMAGE */
+.why-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.blob {
+  width: 380px;
+  height: 380px;
+  border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+  overflow: hidden;
+  position: relative;
+}
+
+.blob img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Decorative dots */
+.blob::before,
+.blob::after {
+  content: "";
+  position: absolute;
+  background: black;
+  border-radius: 50%;
+}
+
+.blob::before {
+  width: 20px;
+  height: 20px;
+  top: -20px;
+  left: 50px;
+}
+
+.blob::after {
+  width: 15px;
+  height: 15px;
+  bottom: -20px;
+  right: 40px;
+}
+
+/* RIGHT CONTENT */
+.why-content {
+  flex: 1;
+}
+
+.why-content h2 {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.why-content p {
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+/* Bullet Points */
+.why-content ul {
+  margin: 20px 0;
+  padding-left: 0;
+}
+
+.why-content li {
+  list-style: none;
+  margin-bottom: 12px;
+  position: relative;
+  padding-left: 20px;
+  color: #333;
+}
+
+/* Red bullet */
+.why-content li::before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  background: #ff4b2b;
+  border-radius: 50%;
+  position: absolute;
+  left: 0;
+  top: 8px;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .why-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .why-content ul {
+    text-align: left;
+  }
+}

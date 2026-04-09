@@ -1,0 +1,79 @@
+.terms-page {
+  font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  color: #444;
+  line-height: 1.7;
+  background-color: #fff;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 25px;
+}
+
+/* Hero Section Styling */
+.terms-hero {
+  background-color: #fff6f7; /* Very light pink background */
+  padding: 60px 0;
+  margin-bottom: 50px;
+}
+
+.hero-flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.hero-text { flex: 1.5; }
+.hero-image { flex: 1; text-align: center; }
+.hero-image img { max-width: 100%; height: auto; }
+
+.hero-text h1 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+  color: #111;
+}
+
+.welcome-text {
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.hero-text p {
+  font-size: 0.95rem;
+  margin-bottom: 12px;
+  color: #555;
+}
+
+/* Main Body Content */
+.terms-main {
+  padding-bottom: 80px;
+}
+
+.terms-section {
+  margin-bottom: 35px;
+}
+
+.terms-section h2 {
+  color: #e91e63; /* Pink/Red branding color */
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.terms-section p {
+  font-size: 0.9rem;
+  text-align: justify;
+  color: #5a5a5a;
+  margin-bottom: 10px;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .hero-flex { flex-direction: column; text-align: center; }
+  .hero-image { order: -1; }
+  .terms-section h2 { font-size: 1.1rem; }
+}
