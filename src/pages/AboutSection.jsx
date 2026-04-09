@@ -1,7 +1,10 @@
 import React from 'react';
 import './AboutPage.css';
+import { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const AboutPage = () => {
+  const [menuOpen, setMenuOpen] = useState(false);
   const stats = [
     { label: "Year Of Foundation", value: "2017" },
     { label: "Global Customers", value: "250+" },
@@ -39,6 +42,32 @@ const AboutPage = () => {
   return (
     
     <div className="about-container">
+      <header className="navbar">
+  <div className="logo">TechNova</div>
+
+  {/* Hamburger */}
+  <div className="menu-toggle" onClick={() => setMenuOpen(!menuOpen)}>
+    <span className={menuOpen ? "bar open" : "bar"}></span>
+    <span className={menuOpen ? "bar open" : "bar"}></span>
+    <span className={menuOpen ? "bar open" : "bar"}></span>
+  </div>
+
+  <nav className={`nav-links ${menuOpen ? "active" : ""}`}>
+    <Link to="/aboutpage">About</Link>
+    <Link to="/SolutionPage">Solutions</Link>
+    <Link to="/ContactPage">Contact</Link>
+
+    {/* Mobile Button */}
+  
+  </nav>
+
+  {/* Desktop Button */}
+  <div className="auth desktop-auth">
+    <Link className="get-started-btn" to="/ContactPage">
+      Get Started
+    </Link>
+  </div>
+</header>
 
         <section className="hero-banner">
       <div className="hero-overlay">

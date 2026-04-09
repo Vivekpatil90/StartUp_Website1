@@ -1,9 +1,39 @@
 import React from 'react';
 import './PrivacyPolicy.css';
+import { Link } from 'react-router-dom';
+import { useState } from 'react';
 
 const PrivacyPolicy = () => {
+  const [menuOpen, setMenuOpen] = useState(false);
+
   return (
     <div className="privacy-page">
+           <header className="navbar">
+  <div className="logo">TechNova</div>
+
+  {/* Hamburger */}
+  <div className="menu-toggle" onClick={() => setMenuOpen(!menuOpen)}>
+    <span className={menuOpen ? "bar open" : "bar"}></span>
+    <span className={menuOpen ? "bar open" : "bar"}></span>
+    <span className={menuOpen ? "bar open" : "bar"}></span>
+  </div>
+
+  <nav className={`nav-links ${menuOpen ? "active" : ""}`}>
+    <Link to="/aboutpage">About</Link>
+    <Link to="/SolutionPage">Solutions</Link>
+    <Link to="/ContactPage">Contact</Link>
+
+    {/* Mobile Button */}
+  
+  </nav>
+
+  {/* Desktop Button */}
+  <div className="auth desktop-auth">
+    <Link className="get-started-btn" to="/ContactPage">
+      Get Started
+    </Link>
+  </div>
+</header>
       {/* Hero Section */}
       <section className="privacy-hero">
         <div className="container hero-flex">

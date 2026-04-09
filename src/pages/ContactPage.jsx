@@ -1,9 +1,40 @@
 import React from 'react';
 import './ContactPage.css';
+import { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const ContactSection = () => {
+  const [menuOpen, setMenuOpen] = useState(false);
+
   return (
+  
     <div className="contact-page">
+      <header className="navbar">
+  <div className="logo">TechNova</div>
+
+  {/* Hamburger */}
+  <div className="menu-toggle" onClick={() => setMenuOpen(!menuOpen)}>
+    <span className={menuOpen ? "bar open" : "bar"}></span>
+    <span className={menuOpen ? "bar open" : "bar"}></span>
+    <span className={menuOpen ? "bar open" : "bar"}></span>
+  </div>
+
+  <nav className={`nav-links ${menuOpen ? "active" : ""}`}>
+    <Link to="/aboutpage">About</Link>
+    <Link to="/SolutionPage">Solutions</Link>
+    <Link to="/ContactPage">Contact</Link>
+
+    {/* Mobile Button */}
+  
+  </nav>
+
+  {/* Desktop Button */}
+  <div className="auth desktop-auth">
+    <Link className="get-started-btn" to="/ContactPage">
+      Get Started
+    </Link>
+  </div>
+</header>
       {/* Top Banner */}
       <div className="contact-banner">
         <div className="banner-text">
