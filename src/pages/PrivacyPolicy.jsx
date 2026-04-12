@@ -19,6 +19,7 @@ const PrivacyPolicy = () => {
   </div>
 
   <nav className={`nav-links ${menuOpen ? "active" : ""}`}>
+    <Link to="/">Home</Link>
     <Link to="/aboutpage">About</Link>
     <Link to="/SolutionPage">Solutions</Link>
     <Link to="/ContactPage">Contact</Link>

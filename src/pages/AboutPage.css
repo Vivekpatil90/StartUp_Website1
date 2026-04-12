@@ -4,7 +4,7 @@
   justify-content: space-between;
   align-items: center;
   margin-top: 15px;
-  padding: 15px 8%;  /* 🔥 FIXED */
+  padding: 10px 8%;  /* 🔥 FIXED */
   top: 0;
   left: 0;
   width: 100%;
@@ -13,10 +13,11 @@
   border-radius: 20px;
   background-color: #000;
   color: white;
-
   background: black;/* Glass effect */
   backdrop-filter: blur(10px);
+
 }
+
 
 /* LOGO */
 .logo {
@@ -86,31 +87,52 @@
 
 /* MOBILE */
 @media (max-width: 768px) {
+
   .menu-toggle {
     display: flex;
   }
+
+  /* ✅ FIX: keep navbar in normal flow */
+  .navbar {
+    position: absolute;   /* changed from absolute */
+    margin-top: -20px;
+  }
+  header
+  {
+    position: absolute;   /* changed from absolute */
+    margin-bottom: -20px;
+  }
+
 
   .desktop-auth {
     display: none;
   }
 
+  /* ✅ Dropdown menu */
   .nav-links {
     position: absolute;
-    top: 70px;
-    right: 0;
+    top: 100%;   /* appear just below navbar */
+    left: 0;
     width: 100%;
     background: #111;
+
+    display: flex;
     flex-direction: column;
     align-items: center;
     gap: 20px;
     padding: 20px 0;
 
-    transform: translateY(-200%);
-    transition: 0.4s ease;
+    transform: translateY(-120%);
+    opacity: 0;
+    pointer-events: none;
+
+    transition: all 0.4s ease;
   }
 
   .nav-links.active {
     transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
   }
 
   .mobile-btn {
